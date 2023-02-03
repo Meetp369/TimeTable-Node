@@ -15,3 +15,19 @@ exports.addTime=(req,res)=>{
         }
       });
 }
+exports.getTime=(req,res)=>{
+  timetableSchema.find((err,data)=>{
+      if(err){
+        res.status(500).json({
+            message:"Error Occured",
+            error:err
+        })
+      }
+      else{
+        res.status(200).json({
+            message:"employee details",
+            data:data
+        })
+      }
+  })
+}
