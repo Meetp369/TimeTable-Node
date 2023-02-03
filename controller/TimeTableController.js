@@ -16,7 +16,9 @@ module.exports.addTime=(req,res)=>{
       });
 }
 module.exports.getTime=(req,res)=>{
+  console.log(timetableSchema.find())
   timetableSchema.find((err,data)=>{
+      
       if(err){
           res.status(500).json({
               message:"Error Occured",
