@@ -1,5 +1,5 @@
 const timetableSchema=require('../model/TimeTableSchema');
-exports.addTime=(req,res)=>{
+module.exports.addTime=(req,res)=>{
     var tt = new timetableSchema(req.body);
     console.log(tt)
     tt.save((err, data) => {
@@ -15,7 +15,7 @@ exports.addTime=(req,res)=>{
         }
       });
 }
-exports.getTime=(req,res)=>{
+module.exports.getTime=(req,res)=>{
   timetableSchema.find((err,data)=>{
       if(err){
         res.status(500).json({
