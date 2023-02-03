@@ -1,7 +1,9 @@
 const express=require('express')
-router=express.Router()
+const router=express.Router()
+
 const timetablecontroller=require('../controller/TimeTableController')
 
-router.post('/tt',timetablecontroller.addTime)
-router.get('/gettt',timetablecontroller.getTime)
+router.post('/addtt',timetablecontroller.addTime)
+router.get('/getdata',timetablecontroller.getTime)
+
 module.exports=router;

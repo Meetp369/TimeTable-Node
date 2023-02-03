@@ -16,7 +16,7 @@ app.use('/dept',departmentRoutes);
 app.use('/product',ProductRoutes);
 app.use('/emp',employeeRoutes);
 app.use('/cart',cartRoutes);
-app.use('/facultytt',ttroutes);
+app.use('/tt',ttroutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
