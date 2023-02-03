@@ -16,20 +16,17 @@ module.exports.addTime=(req,res)=>{
       });
 }
 module.exports.getTime=(req,res)=>{
-  console.log(timetableSchema.find())
   timetableSchema.find((err,data)=>{
-      
-      if(err){
-          res.status(500).json({
-              message:"Error Occured",
-              error:err
-          })
-      }
-      else{
-          res.status(200).json({
-              message:"time table details",
-              data:data
-          })
-      }
+    if(err){
+      res.status(501).json({
+        message:"error occured",
+        err:err
+      })
+    }else{
+      res.status(201).json({
+        message:"details time table",
+        data:data
+      })
+    }
   })
 }
