@@ -25,7 +25,7 @@ exports.getTime=(req,res)=>{
       }
       else{
         res.status(200).json({
-            message:"employee details",
+            message:"time table details",
             data:data
         })
       }
