@@ -30,3 +30,18 @@ module.exports.getTime=(req,res)=>{
     }
   })
 }
+module.exports.updateTime=(req,res)=>{
+  let id=req.params.id;
+  timetableSchema.findByIdAndUpdate(id,req.body,(err,data)=>{
+    if(err){
+      res.status(500).json({
+        message:"error occured"
+      })
+    }else{
+      res.status(200).json({
+        message:"timetable updated",
+        data:data
+      })
+    }
+  })
+}
