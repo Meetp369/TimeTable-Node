@@ -5,5 +5,5 @@ const timetablecontroller=require('../controller/TimeTableController')
 
 router.post('/addtt',timetablecontroller.addTime)
 router.get('/getdata',timetablecontroller.getTime)
-router.put('/updatett',timetablecontroller.updateTime)
+router.put('/updatett/:id',timetablecontroller.updateTime)
 module.exports=router;
