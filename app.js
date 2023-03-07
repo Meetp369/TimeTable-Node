@@ -8,6 +8,7 @@ const ProductRoutes=require('./routes/ProductRoutes');
 const employeeRoutes=require('./routes/EmployeeRoutes')
 const cartRoutes=require('./routes/CartRoutes');
 const ttroutes=require('./routes/TimeTableRoutes');
+const dynaimcRoutes=require("./routes/DynamicFormROutes")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,8 +20,9 @@ app.use('/product',ProductRoutes);
 app.use('/emp',employeeRoutes);
 app.use('/cart',cartRoutes);
 app.use('/tt',ttroutes);
+app.use('/dform',dynaimcRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log("Server is running on port", PORT)
 });
